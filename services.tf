@@ -28,7 +28,7 @@ resource "aiven_kafka" "cdc-kafka" {
     kafka_rest      = true
     kafka_connect   = false
     schema_registry = true
-    kafka_version   = "3.9"
+    kafka_version   = "3.8"
 
     kafka {
       auto_create_topics_enable  = true
