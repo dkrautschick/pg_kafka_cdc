@@ -3,6 +3,11 @@ resource "aiven_pg" "cdc-pg" {
   service_name = "cdc-postgres"
   cloud_name   = "do-fra"
   plan         = "startup-4"
+
+  pg_user_config {
+    pg_version = 17
+  }
+
 }
 
 resource "null_resource" "db_setup" {
@@ -42,7 +47,7 @@ resource "aiven_kafka" "cdc-kafka" {
 resource "aiven_kafka_connect" "cdc-kafka-connect" {
   project                 = var.project_name
   cloud_name              = "do-fra"
-  plan                    = "startup-4"
+  plan                    = "startup-2"
   service_name            = "cdc-kafka-connect"
   maintenance_window_dow  = "monday"
   maintenance_window_time = "10:00:00"
