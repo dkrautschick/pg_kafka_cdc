@@ -20,7 +20,7 @@ resource "null_resource" "db_setup" {
 resource "aiven_kafka" "cdc-kafka" {
   project                 = var.project_name
   cloud_name              = "do-fra"
-  plan                    = "startup-2"
+  plan                    = "startup-4"
   service_name            = "cdc-kafka"
   maintenance_window_dow  = "saturday"
   maintenance_window_time = "10:00:00"
@@ -47,7 +47,7 @@ resource "aiven_kafka" "cdc-kafka" {
 resource "aiven_kafka_connect" "cdc-kafka-connect" {
   project                 = var.project_name
   cloud_name              = "do-fra"
-  plan                    = "startup-2"
+  plan                    = "startup-4"
   service_name            = "cdc-kafka-connect"
   maintenance_window_dow  = "monday"
   maintenance_window_time = "10:00:00"
