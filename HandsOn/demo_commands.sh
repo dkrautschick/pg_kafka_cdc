@@ -23,6 +23,7 @@ bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 bin/kafka-topics.sh --describe --topic mytopic --bootstrap-server localhost:9092
 bin/kafka-console-producer.sh --topic mytopic  --bootstrap-server localhost:9092
 bin/kafka-console-consumer.sh --topic mytopic  --from-beginning --bootstrap-server localhost:9092
+bin/kafka-topics.sh --topic mytopic --delete --describe --bootstrap-server localhost:9092
 
 Download and extract an connector of your choice
 
