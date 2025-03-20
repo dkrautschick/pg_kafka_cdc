@@ -7,6 +7,9 @@ ALTER TABLE beer replica identity FULL;
 insert into beer values ( 'Chimay' );
 insert into beer values ( 'Delirium Tremens' );
 insert into beer values ( 'Leffe' );
+insert into beer values ( 'Franziskaner');
+insert into beer values ( 'Guinnes' );
+insert into beer values ( 'Bitburger' );
 insert into beer values ( 'Straffe Hendrik' );
 insert into beer values ( 'St. Bernadus Abt 12' );
 
